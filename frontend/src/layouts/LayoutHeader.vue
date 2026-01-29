@@ -8,8 +8,8 @@
             @click="closeMobileMenu"
             class="flex items-center"
           >
-            <img src="/logo-text.png" alt="LiveFit+" class="h-6 w-auto" />
-            <span class="sr-only">LiveFit+</span>
+            <img :src="logoText" alt="LiveFit+" class="h-6 w-auto" />
+            <span class="sr-only">LiveFit</span>
           </router-link>
         </h1>
 
@@ -200,6 +200,8 @@ import { storeToRefs } from "pinia";
 import { useRouter } from "vue-router";
 import { useUserStore } from "../stores/user.js";
 import { removeCookie } from "../utils/cookie.js";
+
+import logoText from "../../public/logo-text-v2.png";
 
 const router = useRouter();
 const { name, role } = storeToRefs(useUserStore());
